@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Define que o documento é HTML5 -->
+
+<html lang="pt-BR">
+<!-- Página em português -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define codificação para UTF-8, garantindo acentos e caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsividade para dispositivos móveis -->
+
+    <title>Cores com Botão</title>
+    <!-- Título da aba do navegador -->
+</head>
+
+<body onload="alert('Após realizar os testes, feche a janela para voltar')">
+    <!--
+      Atributo onload executa um alerta assim que a página carrega, avisando o usuário
+    -->
+
+    <form name="form1">
+        <!-- Formulário com nome "form1" (não é usado para enviar dados, só organização) -->
+
+        <center>
+            <!-- Centraliza o conteúdo (antigo, não recomendado; melhor usar CSS) -->
+
+            <br>
+            <!-- Quebra de linha para espaçamento -->
+
+            <h3>Clique em uma das opções para alterar a cor de sua página</h3>
+            <!-- Texto explicativo -->
+
+            <input type="button" name="btazul" value="Azul" onclick="document.bgColor=('blue')">&nbsp;&nbsp;
+            <!-- Botão que, ao clicar, muda o fundo da página para azul -->
+
+            <input type="button" name="btvermelho" value="Vermelho" onclick="document.bgColor=('red')">&nbsp;&nbsp;
+            <!-- Botão para vermelho -->
+
+            <input type="button" name="btverde" value="Verde" onclick="document.bgColor='green'">&nbsp;&nbsp;
+            <!-- Botão para verde -->
+
+            <input type="button" name="btazulclaro" value="Amarelo" onclick="document.bgColor='yellow'">&nbsp;&nbsp;
+            <!-- Botão para amarelo -->
+
+            <input type="button" name="btamarelo" value="Amarelo Ouro" onclick="document.bgColor='gold'">&nbsp;&nbsp;
+            <!-- Botão para amarelo ouro -->
+
+            <input type="button" name="btouro" value="Azul Claro" onclick="document.bgColor='cyan'">&nbsp;&nbsp;
+            <!-- Botão para azul claro (ciano) -->
+
+            <input type="button" name="btverdeclaro" value="Verde Claro" onclick="document.bgColor='lime'">&nbsp;&nbsp;
+            <!-- Botão para verde claro (limão) -->
+        </center>
+    </form>
+
+</body>
+
+</html>

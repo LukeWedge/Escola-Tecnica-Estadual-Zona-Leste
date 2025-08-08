@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- Declara que o documento está no padrão HTML5 -->
+
+<html lang="pt-BR">
+<!-- Define que a linguagem da página é português -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Suporte para acentos e caracteres especiais -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o layout se adaptar a dispositivos móveis -->
+
+    <title>Minha Calculadora</title>
+    <!-- Título da aba do navegador -->
+
+    <style>
+        body {
+            font-family: sans-serif;
+            /* Fonte limpa e sem firula */
+        }
+
+        .calculadora {
+            width: 300px;
+            padding: 20px;
+            border: 5px solid grey;
+            box-shadow: 0 0 0 5px orange;
+            margin: 50px auto;
+            /* Centraliza o conteúdo horizontalmente e dá espaço no topo */
+        }
+
+        input[type="text"],
+        input[type="button"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            /* Espaço interno nos inputs */
+        }
+
+        input[type="button"] {
+            width: 70px;
+            /* Deixa os botões com largura fixa */
+        }
+
+        #resultado {
+            font-weight: bold;
+            font-size: 1.2em;
+            /* Destaque para o resultado */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculadora">
+        <h2>Minha Calculadora</h2>
+
+        <form>
+            Primeiro Número<br>
+            <input type="text" id="num1"><br>
+
+            Segundo Número<br>
+            <input type="text" id="num2"><br>
+
+            <!-- Cada botão chama uma função diferente -->
+            <input type="button" value="Soma" onclick="somar()">
+            <input type="button" value="Subtrair" onclick="subtrair()">
+            <input type="button" value="Multiplicar" onclick="multiplicar()">
+            <input type="button" value="Dividir" onclick="dividir()">
+        </form>
+
+        <!-- Aqui vai aparecer o resultado -->
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function somar() {
+            // Pega os inputs
+            var n1 = document.getElementById('num1');
+            var n2 = document.getElementById('num2');
+            var resultadoElemento = document.getElementById('resultado');
+
+            // Converte os valores para número com decimais
+            var valor1 = parseFloat(n1.value);
+            var valor2 = parseFloat(n2.value);
+
+            var total = valor1 + valor2;
+
+            // Exibe o resultado na tela
+            resultadoElemento.innerText = 'O Resultado é ' + total;
+        }
+
+        function subtrair() {
+            var n1 = document.getElementById('num1');
+            var n2 = document.getElementById('num2');
+            var resultadoElemento = document.getElementById('resultado');
+
+            var valor1 = parseFloat(n1.value);
+            var valor2 = parseFloat(n2.value);
+
+            var total = valor1 - valor2;
+
+            resultadoElemento.innerText = 'O Resultado é ' + total;
+        }
+
+        function multiplicar() {
+            var n1 = document.getElementById('num1');
+            var n2 = document.getElementById('num2');
+            var resultadoElemento = document.getElementById('resultado');
+
+            var valor1 = parseFloat(n1.value);
+            var valor2 = parseFloat(n2.value);
+
+            var total = valor1 * valor2;
+
+            resultadoElemento.innerText = 'O Resultado é ' + total;
+        }
+
+        function dividir() {
+            var n1 = document.getElementById('num1');
+            var n2 = document.getElementById('num2');
+            var resultadoElemento = document.getElementById('resultado');
+
+            var valor1 = parseFloat(n1.value);
+            var valor2 = parseFloat(n2.value);
+
+            if (valor2 === 0) {
+                // Tratamento de erro para divisão por zero
+                resultadoElemento.innerText = 'Não é possível dividir por zero!';
+            } else {
+                var total = valor1 / valor2;
+                resultadoElemento.innerText = 'O Resultado é ' + total;
+            }
+        }
+    </script>
+</body>
+
+</html>

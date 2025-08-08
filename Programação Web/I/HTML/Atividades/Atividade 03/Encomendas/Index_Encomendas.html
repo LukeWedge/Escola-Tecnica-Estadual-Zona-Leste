@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Define o tipo do documento como HTML5 -->
+
+<html lang="pt-BR">
+<!-- Raiz da página HTML com idioma definido como português brasileiro -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, permitindo acentuação -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Deixa o site responsivo (ajusta para telas pequenas) -->
+
+    <title>Document</title>
+    <!-- Título da aba do navegador -->
+</head>
+
+<body>
+    <!-- Corpo visível da página -->
+
+    <header>
+        <!-- Cabeçalho do site -->
+
+        <h1>Pães Doces e Bolos</h1>
+        <!-- Título principal da página -->
+
+        <ul>
+            <!-- Lista de navegação (menu) -->
+            <li><a href="Index.html">Página Principal</a></li>
+            <li><a href="Index_Encomendas.html">Encomendar Bolo</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <!-- Conteúdo principal da página -->
+
+        <h2>Encomendar Bolo</h2>
+        <!-- Subtítulo para o formulário de encomenda -->
+
+        <form method="get">
+            <!-- Formulário de envio (corrigido: "action" deve ser a URL de envio ou omitido; "get" é o método correto) -->
+
+            Nome:
+            <input type="text" name="Nome" size="30" maxlength="20" placeholder="Informe o nome">
+            <!-- Campo de texto para o nome do cliente -->
+
+            DDD: (
+            <input type="text" name="DDD" size="2" maxlength="2" placeholder="DDD">)
+            <!-- Campo para o DDD (ajustado tamanho e máximo para dois dígitos) -->
+
+            Telefone:
+            <input type="text" name="Telefone" size="10" maxlength="10" placeholder="Telefone">
+            <!-- Campo para o número de telefone -->
+        </form>
+
+        <table border="1">
+            <!-- Tabela com borda exibindo imagens dos bolos -->
+
+            <caption>Bolos</caption>
+            <!-- Título da tabela -->
+
+            <tr>
+                <th><img src="Imagens/Bolo01.png" height="200"></th>
+                <th><img src="Imagens/Bolo02.png" height="200"></th>
+                <th><img src="Imagens/Bolo03.png" height="200"></th>
+            </tr>
+            <!-- Primeira linha com imagens dos bolos -->
+
+            <tr>
+                <th>Chocolate</th>
+                <th>Frutas</th>
+                <th>Misto</th>
+            </tr>
+            <!-- Segunda linha com nomes dos sabores -->
+        </table>
+
+        <form method="post">
+            <!-- Novo formulário (corrigido: deve usar "method" e "name" nos inputs) -->
+
+            <!-- Opções de escolha de bolo usando botões de rádio -->
+            <label>
+                <input type="radio" name="bolo" value="chocolate"> Chocolate
+            </label>
+
+            <label>
+                <input type="radio" name="bolo" value="frutas"> Frutas
+            </label>
+
+            <label>
+                <input type="radio" name="bolo" value="misto"> Misto
+            </label>
+
+            <!-- Botão de envio -->
+            <br><br>
+            <input type="submit" value="Enviar Encomenda">
+        </form>
+    </main>
+</body>
+
+</html>

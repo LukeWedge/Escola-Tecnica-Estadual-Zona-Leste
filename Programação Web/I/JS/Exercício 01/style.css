@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Define a fonte do texto da página.
+       Primeiro tenta Arial, se não tiver tenta Helvetica,
+       e se nenhuma das duas tiver, usa qualquer fonte sem serifa. */
+
+    background-color: #f0f0f0;
+    /* Define a cor de fundo da página como um cinza claro */
+
+    text-align: center;
+    /* Centraliza todo o texto dentro do body horizontalmente */
+
+    margin-top: 50px;
+    /* Dá uma margem de 50 pixels no topo da página,
+       empurrando o conteúdo pra baixo */
+}

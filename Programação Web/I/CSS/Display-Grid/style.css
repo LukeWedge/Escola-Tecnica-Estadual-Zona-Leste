@@ -1,0 +1,113 @@
+/* Reset geral e definição de fonte */
+* {
+    margin: 0px;
+    /* Remove margens padrão */
+    padding: 0px;
+    /* Remove preenchimento padrão */
+    box-sizing: border-box;
+    /* Inclui padding e border no tamanho total dos elementos */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Fonte padrão para todo o site */
+}
+
+/* Container principal com Grid */
+.recipiente {
+    display: grid;
+    /* Ativa o Grid Layout */
+    grid-template-areas:
+        /* Define as áreas nomeadas do layout */
+        "header header"
+        "nav nav"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 250px 1fr;
+    /* Coluna 1: fixa (250px), Coluna 2: flexível */
+    grid-template-rows: 100px 50px auto 50px;
+    /* Alturas: cabeçalho, nav, conteúdo, rodapé */
+    gap: 5px;
+    /* Espaço entre os elementos do grid */
+    height: 100vh;
+    /* Ocupa toda a altura da tela */
+    border: 2px solid lightcoral;
+    /* Borda do contêiner inteiro */
+    padding: 5px;
+    /* Espaço interno ao redor do grid */
+}
+
+/* Cabeçalho */
+header {
+    grid-area: header;
+    /* Mapeia para a área "header" */
+    background-color: lightcyan;
+    /* Cor de fundo */
+    text-align: center;
+    /* Centraliza texto horizontalmente */
+    font-weight: bold;
+    /* Texto em negrito */
+    font-size: 15px;
+    /* Tamanho da fonte */
+    display: flex;
+    /* Flexbox para alinhar conteúdo */
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    border: 1px solid black;
+    /* Borda ao redor */
+}
+
+/* Navegação */
+nav {
+    grid-area: nav;
+    /* Mapeia para a área "nav" */
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+/* Barra lateral */
+aside {
+    grid-area: sidebar;
+    /* Mapeia para a área "sidebar" */
+    background-color: lightpink;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+/* Conteúdo principal */
+main {
+    grid-area: main;
+    /* Mapeia para a área "main" */
+    background-color: lightblue;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+/* Rodapé */
+footer {
+    grid-area: footer;
+    /* Mapeia para a área "footer" */
+    background-color: lightcyan;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+}

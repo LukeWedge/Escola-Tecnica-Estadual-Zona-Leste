@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Declara que o documento é em HTML5 -->
+
+<html lang="pt-BR">
+<!-- Define o idioma da página como português -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação dos caracteres para suportar acentuação -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página funcionar melhor em dispositivos móveis -->
+
+    <title>Cores com Botão de Rádio</title>
+    <!-- Título que aparece na aba do navegador -->
+</head>
+
+<body>
+    <form name="form1">
+        <!-- Formulário com nome "form1" (não está sendo enviado, apenas usado para agrupar elementos) -->
+
+        <center>
+            <!-- Centraliza o conteúdo horizontalmente (mas é uma tag antiga, melhor evitar no HTML moderno) -->
+
+            <br>
+            <!-- Pula uma linha (espaçamento vertical) -->
+
+            <h3>Clique em uma das opções para alterar a cor de sua página</h3>
+            <!-- Título explicando o que fazer -->
+
+            <!-- Grupo de botões de rádio, todos com o mesmo "name", então só dá pra selecionar um -->
+            <!-- Cada botão muda a cor de fundo da página com document.bgColor -->
+            <input type="radio" name="cor" onclick="document.bgColor='blue'"> Azul &nbsp;&nbsp;
+            <input type="radio" name="cor" onclick="document.bgColor='red'"> Vermelho &nbsp;&nbsp;
+            <input type="radio" name="cor" onclick="document.bgColor='green'"> Verde &nbsp;&nbsp;
+            <input type="radio" name="cor" onclick="document.bgColor='yellow'"> Amarelo &nbsp;&nbsp;
+            <input type="radio" name="cor" onclick="document.bgColor='gold'"> Amarelo Ouro &nbsp;&nbsp;
+            <input type="radio" name="cor" onclick="document.bgColor='cyan'"> Azul Claro &nbsp;&nbsp;
+            <input type="radio" name="cor" onclick="document.bgColor='lime'"> Verde Claro &nbsp;&nbsp;
+
+            <!-- Os &nbsp;&nbsp; criam espaços entre os botões, mas também é melhor fazer isso com CSS -->
+        </center>
+    </form>
+</body>
+
+</html>
