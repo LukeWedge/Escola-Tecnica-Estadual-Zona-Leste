@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Define que o documento é HTML5 -->
+
+<html lang="pt-BR">
+<!-- Define o idioma principal da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define o padrão de caracteres para UTF-8 (suporta acentos) -->
+
+    <title>JS</title>
+    <!-- Título que aparece na aba do navegador -->
+
+</head>
+
+<body>
+    <h1>Exercícios em JavaScript</h1>
+    <!-- Cabeçalho principal -->
+
+    <script>
+        let nota1 = 8, nota2 = 6, nota3 = 9; // Declara as notas
+        let media = (nota1 + nota2 + nota3) / 3; // Calcula média aritmética
+        // Estrutura condicional para verificar se passou ou não
+        if (media >= 7) {
+            mostrar(`Aluno aprovado com média ${media.toFixed(2)}`); // toFixed(2) limita a 2 casas decimais
+        } else {
+            mostrar(`Aluno reprovado com média ${media.toFixed(2)}`);
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Define que o documento é HTML5 -->
+
+<html lang="pt-BR">
+<!-- Define o idioma principal da página como português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define o padrão de caracteres para UTF-8 (suporta acentos) -->
+
+    <title>JS</title>
+    <!-- Título que aparece na aba do navegador -->
+
+</head>
+
+<body>
+    <h1>Exercícios em JavaScript</h1>
+    <!-- Cabeçalho principal -->
+
+    <script>
+        // Função utilitária para mostrar texto na tela com quebra de linha
+        function mostrar(texto) {
+            document.write(texto + "<br>"); // Escreve o texto no documento HTML seguido de <br>
+        }
+
+        let nome = "Lucas Cunha"; // Variável do tipo string com o nome
+        let idade = 22; // Variável do tipo numérico com a idade
+        mostrar(`Meu nome é ${nome} e tenho ${idade} anos.`); // Interpola as variáveis no texto e mostra na tela
+    </script>
+
+</body>
+
+</html>
