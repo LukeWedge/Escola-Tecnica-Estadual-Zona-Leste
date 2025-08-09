@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!-- Declara que o documento está usando HTML5 -->
+
+<html lang="pt-BR">
+<!-- Início do documento HTML e define o idioma como português -->
+
+<head>
+    <!-- Cabeçalho do documento (não visível na página) -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8, permitindo acentuação -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna o site responsivo, ajustando para diferentes tamanhos de tela -->
+
+    <title>Calculadora</title>
+    <!-- Título da aba do navegador -->
+</head>
+
+<body>
+    <!-- Corpo visível da página -->
+
+    <script>
+        // Início do código JavaScript
+
+        window.alert("Bem-vindo à Calculadora feita em JavaScript!");
+        // Exibe uma mensagem de boas-vindas em um pop-up
+
+        const primeiroNumeroInput = window.prompt("Digite o primeiro número:");
+        // Pede ao usuário o primeiro número via pop-up e armazena como string
+
+        const operacao = window.prompt("Qual operação você quer fazer? Digite +, -, * ou /");
+        // Pede ao usuário para escolher a operação matemática
+
+        const segundoNumeroInput = window.prompt("Digite o segundo número:");
+        // Pede ao usuário o segundo número via pop-up e armazena como string
+
+        const numero1 = parseFloat(primeiroNumeroInput);
+        const numero2 = parseFloat(segundoNumeroInput);
+        // Converte as strings recebidas para números reais (float)
+
+        if (isNaN(numero1) || isNaN(numero2)) {
+            // Verifica se algum dos valores convertidos não é número (NaN)
+
+            window.alert("Erro: Um ou ambos os valores digitados não são números válidos. Por favor, recarregue a página e tente novamente.");
+            // Exibe mensagem de erro se o usuário digitou algo inválido
+        } else {
+            // Se ambos os números são válidos, executa o cálculo
+
+            let resultado;
+            // Declara variável para armazenar o resultado
+
+            switch (operacao) {
+                // Estrutura condicional para verificar qual operação foi escolhida
+
+                case '+':
+                    resultado = numero1 + numero2;
+                    break;
+                // Soma os dois números
+
+                case '-':
+                    resultado = numero1 - numero2;
+                    break;
+                // Subtrai o segundo do primeiro
+
+                case '*':
+                    resultado = numero1 * numero2;
+                    break;
+                // Multiplica os dois números
+
+                case '/':
+                    if (numero2 === 0) {
+                        // Verifica se o usuário está tentando dividir por zero
+
+                        window.alert("Erro: Não é possível dividir um número por zero.");
+                        // Exibe erro caso o segundo número seja zero
+
+                        resultado = undefined;
+                        // Define resultado como indefinido
+                    } else {
+                        resultado = numero1 / numero2;
+                        // Executa a divisão normalmente
+                    }
+                    break;
+
+                default:
+                    window.alert("Erro: Operação inválida. Por favor, use apenas +, -, * ou /.");
+                    // Mensagem de erro caso o usuário tenha digitado algo fora dos símbolos permitidos
+                    break;
+            }
+
+            if (resultado !== undefined) {
+                // Verifica se o resultado é válido
+
+                window.alert(`O resultado de ${numero1} ${operacao} ${numero2} é: ${resultado}`);
+                // Exibe o resultado final da operação
+            }
+        }
+    </script>
+</body>
+
+</html>
